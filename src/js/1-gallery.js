@@ -90,32 +90,17 @@ function createGallery (arr) {
 ).join("")
 }
 
-// function handleClick (event) {
-//     event.preventDefault();
-
-//     const target = event.target.closest(".gallery-image");
-//     if (!target) {
-//         return;
-//     }
-//     const imageSrc = target.dataset.source;
-//     const imageAlt = target.alt;
-
-
-//     const instance = basicLightbox.create(`
-// 	<div class="modal">
-//     <img src="${imageSrc}"
-//     alt="${imageAlt}"
-//     width="1112"
-//     height="640"
-//     />
-//     </div>
-//     `)
-
-//     instance.show()
-
-// }
-
-
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 function handleClick (event) {
         event.preventDefault();
-}    
+        let lightbox = new SimpleLightbox('.gallery a', { 
+          captionsData: "alt",
+          captionDelay: 250,
+          className: "simple-lightbox",
+          elements: ".sl-close, .sl-prev, .sl-next"
+          
+    });
+         }
+  
+

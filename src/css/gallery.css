@@ -28,3 +28,18 @@ body {
     display: block;
     margin: 24px;
 }
+
+
+
+.simple-lightbox {
+    background-color: rgba(46, 47, 66, 0.8); 
+}
+
+
+
+.simple-lightbox .sl-close,
+.simple-lightbox .sl-prev,
+.simple-lightbox .sl-next {
+ color: #fff; 
+   
+}
