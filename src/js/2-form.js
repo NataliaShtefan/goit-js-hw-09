@@ -15,8 +15,8 @@ const formData = {
     const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (savedData) {
       const parsedData = JSON.parse(savedData);
-      formData.email = parsedData.email || '';
-      formData.message = parsedData.message || '';
+      formData.email = parsedData.email || "";
+      formData.message = parsedData.message || "";
       emailInput.value = formData.email;
       messageTextarea.value = formData.message;
     }
