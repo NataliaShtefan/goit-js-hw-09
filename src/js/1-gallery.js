@@ -68,9 +68,11 @@ const images = [
 
 const gallery = document.querySelector(".gallery");  //
 gallery.insertAdjacentHTML("beforeend", createGallery(images));
-gallery.addEventListener("click", handleClick);
 
 
+
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 function createGallery (arr) {
@@ -90,10 +92,8 @@ function createGallery (arr) {
 ).join("")
 }
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-function handleClick (event) {
-        event.preventDefault();
+
+    
         let lightbox = new SimpleLightbox('.gallery a', { 
           captionsData: "alt",
           captionDelay: 250,
@@ -101,6 +101,6 @@ function handleClick (event) {
           elements: ".sl-close, .sl-prev, .sl-next"
           
     });
-         }
+        
   
 
